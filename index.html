@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<title> 문한철 ♥ 송민정 결혼합니다</title>
+<meta name="description" content="2026년 11월 21일 토요일 오후 12시 30분, 한강성당에서 결혼합니다." />
+<!-- 검색엔진·이미지 검색에 노출되지 않도록 합니다 (링크를 받은 분들만 볼 수 있게) -->
+<meta name="robots" content="noindex, nofollow, noimageindex, noarchive" />
+
+<!-- Open Graph (카카오톡/문자 공유 시 미리보기) -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="문한철 ♥ 송민정 결혼합니다" />
+<meta property="og:description" content="2026년 11월 21일 토요일 오후 12시 30분, 한강성당" />
+<meta property="og:image" content="https://weddinghan1121-bot.github.io/wedding-card/images/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://weddinghan1121-bot.github.io/wedding-card/" />
+
+<meta name="theme-color" content="#faf9f4" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💌</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Poppins:wght@300;400;500&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css?v=20261010n" />
+</head>
+<body>
+
+<audio id="bgm" src="audio/bgm.mp3" loop preload="none"></audio>
+
+<div class="lang-toggle" id="lang-toggle" role="group" aria-label="언어 선택 / Language">
+  <button type="button" class="lang-toggle__btn" data-lang-btn="kr">KR</button>
+  <button type="button" class="lang-toggle__btn" data-lang-btn="en">EN</button>
+</div>
+
+<div class="petals" id="petals" aria-hidden="true"></div>
+
+<div class="card">
+
+  <!-- ===== 커버 ===== -->
+  <section class="section hero">
+    <div class="hero__frame">
+      <img class="hero__photo" src="images/photos/hero.jpg" alt="신랑 신부 사진" fetchpriority="high" />
+      <div class="hero__overlay">
+        <p class="hero__eyebrow">WE ARE GETTING MARRIED</p>
+        <h1 class="hero__names">
+          <span id="hero-groom-en">HANCHEOL</span>
+          <span class="hero__amp">&amp;</span>
+          <span id="hero-bride-en">MINJEONG</span>
+        </h1>
+        <p class="hero__date" id="hero-date">11. 21. 2026 SAT · 12:30 PM</p>
+        <p class="hero__venue" id="hero-venue">한강성당</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 인사말 ===== -->
+  <section class="section intro">
+    <p class="eyebrow">INVITATION</p>
+    <h2 class="section-title" data-kr="소중한 분들을 초대합니다" data-en="You Are Invited">소중한 분들을 초대합니다</h2>
+    <p class="intro__text" data-html="1" data-kr="서로 다른 길을 걸어온 두 사람이<br />이제 하나의 길을 함께 걷고자 합니다.<br /><br />바쁘신 걸음 잠시 멈추시고<br />저희 두 사람의 새로운 시작을<br />축복해 주시면 감사하겠습니다." data-en="Two people who walked different paths<br />now wish to walk one path together.<br /><br />Please take a moment from your busy day<br />to celebrate the beginning<br />of our new life together.">
+      서로 다른 길을 걸어온 두 사람이<br />
+      이제 하나의 길을 함께 걷고자 합니다.<br /><br />
+      바쁘신 걸음 잠시 멈추시고<br />
+      저희 두 사람의 새로운 시작을<br />
+      축복해 주시면 감사하겠습니다.
+    </p>
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 120 24" width="120" height="24"><path d="M0 12 H45 M75 12 H120" stroke="currentColor" stroke-width="1"/><circle cx="60" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+    </div>
+    <div class="family">
+      <p class="family__row" id="family-groom"></p>
+      <p class="family__row" id="family-bride"></p>
+    </div>
+  </section>
+
+  <!-- ===== 캘린더 / 디데이 ===== -->
+  <section class="section calendar-section">
+    <p class="eyebrow">WEDDING DAY</p>
+    <h2 class="section-title" id="wedding-date-display">2026년 11월 21일 토요일 오후 12시 30분</h2>
+
+    <div class="mini-calendar" id="mini-calendar" aria-hidden="true"></div>
+
+    <div class="countdown" id="countdown">
+      <div class="countdown__item"><span class="countdown__num" id="cd-days">00</span><span class="countdown__label">DAYS</span></div>
+      <div class="countdown__item"><span class="countdown__num" id="cd-hours">00</span><span class="countdown__label">HOUR</span></div>
+      <div class="countdown__item"><span class="countdown__num" id="cd-min">00</span><span class="countdown__label">MIN</span></div>
+      <div class="countdown__item"><span class="countdown__num" id="cd-sec">00</span><span class="countdown__label">SEC</span></div>
+    </div>
+    <p class="countdown__caption" id="countdown-caption">결혼식까지 D-000일</p>
+
+    <button class="btn btn--outline" id="btn-add-calendar" data-kr="📅 캘린더에 저장하기" data-en="📅 Add to Calendar">📅 캘린더에 저장하기</button>
+  </section>
+
+  <!-- ===== 갤러리 ===== -->
+  <section class="section gallery-section">
+    <p class="eyebrow">GALLERY</p>
+    <h2 class="section-title" data-kr="우리의 순간들" data-en="Our Moments">우리의 순간들</h2>
+    <button type="button" class="story-launch" id="story-launch" aria-haspopup="dialog">
+      <img id="story-cover" alt="" loading="lazy" />
+      <span class="story-launch__content">
+        <span class="story-launch__eyebrow">A LITTLE FILM OF LOVE</span>
+        <span class="story-launch__title" data-kr="우리의 이야기" data-en="Our story">우리의 이야기</span>
+        <span class="story-launch__play"><span aria-hidden="true">▶</span> <span data-kr="우리의 이야기 재생" data-en="Play our story">우리의 이야기 재생</span></span>
+        <span class="story-launch__detail" data-kr="음악과 함께하는 짧은 순간들" data-en="A few moments, set to music">음악과 함께하는 짧은 순간들</span>
+      </span>
+    </button>
+    <div class="gallery" id="gallery">
+    </div>
+  </section>
+
+  <!-- ===== 오시는 길 ===== -->
+  <section class="section location-section">
+    <p class="eyebrow">LOCATION</p>
+    <h2 class="section-title" id="venue-name">한강성당</h2>
+    <p class="location__address" id="venue-address">서울특별시 용산구 이촌로 81길 38</p>
+
+    <div class="map-wrap">
+      <iframe
+        id="map-frame"
+        class="map-frame"
+        title="예식장 위치 지도"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        tabindex="-1"
+        src="">
+      </iframe>
+      <!-- 지도 안을 누르면 구글 지도 전체 페이지가 프레임 안에서 열리며 차단(ERR_BLOCKED_BY_RESPONSE)되므로,
+           지도는 보기 전용으로 두고 탭하면 네이버 지도로 연결합니다 -->
+      <a class="map-link" id="map-link" href="#" target="_blank" rel="noopener" aria-label="네이버 지도에서 크게 보기 / Open on Naver Map"></a>
+    </div>
+
+    <div class="map-actions">
+      <button class="btn btn--small" id="btn-copy-address" data-kr="주소 복사" data-en="Copy Address">주소 복사</button>
+      <a class="btn btn--small" id="btn-open-map" href="#" target="_blank" rel="noopener" data-kr="네이버 지도에서 보기" data-en="View on Naver Map">네이버 지도에서 보기</a>
+    </div>
+
+    <p class="transit__note" data-html="1"
+       data-kr="주차 공간이 넉넉하지 않아<br />가급적 대중교통을 이용해 주시면 감사하겠습니다."
+       data-en="Parking nearby is limited,<br />so we kindly recommend public transportation.">주차 공간이 넉넉하지 않아<br />가급적 대중교통을 이용해 주시면 감사하겠습니다.</p>
+
+    <div class="transit">
+      <details class="transit__item" open>
+        <summary data-kr="🚇 지하철" data-en="🚇 Subway">🚇 지하철</summary>
+        <p id="transit-subway">4호선 이촌역 3-1번 출구 / 경의중앙선 이촌역 4번 출구</p>
+        <p id="transit-walk"></p>
+        <ol class="walk-steps" id="walk-steps"></ol>
+        <div class="walk-actions">
+          <a class="btn btn--small" id="btn-walk-naver" href="#" target="_blank" rel="noopener"
+             data-kr="네이버 도보 길찾기" data-en="Walk route (Naver)">네이버 도보 길찾기</a>
+        </div>
+      </details>
+      <details class="transit__item" open>
+        <summary data-kr="🚗 주차" data-en="🚗 Parking">🚗 주차</summary>
+        <p id="transit-parking">차량으로 오시는 경우 근처 공영 주차장을 이용해 주세요.</p>
+        <ol class="parking-lots" id="parking-lots"></ol>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===== 마음 전하실 곳 ===== -->
+  <section class="section account-section">
+    <p class="eyebrow">GIFT</p>
+    <h2 class="section-title" data-kr="마음 전하실 곳" data-en="Wedding Gift">마음 전하실 곳</h2>
+    <p class="account__desc" data-html="1" data-kr="참석이 어려우신 분들을 위해<br />계좌번호를 안내드립니다." data-en="For those who cannot attend in person,<br />our account details are listed below.">참석이 어려우신 분들을 위해<br />계좌번호를 안내드립니다.</p>
+
+    <details class="account-accordion">
+      <summary data-kr="신랑측 계좌번호 보기" data-en="View Groom's Side Accounts">신랑측 계좌번호 보기</summary>
+      <div class="account-list" id="account-groom"></div>
+    </details>
+
+    <details class="account-accordion">
+      <summary data-kr="신부측 계좌번호 보기" data-en="View Bride's Side Accounts">신부측 계좌번호 보기</summary>
+      <div class="account-list" id="account-bride"></div>
+    </details>
+
+    <p class="account__notice" data-html="1" data-kr="축하 화환, 화분, 꽃바구니는 정중히 사양합니다.<br />마음을 전하고 싶으신 분들은<br />꽃 화환 대신 쌀 화환으로 보내주시면<br />성당을 통해 도움이 필요한 이웃들께<br />소중히 기부하겠습니다." data-en="We kindly ask that you refrain from sending<br />flower wreaths, potted plants, or flower baskets.<br />If you wish, please send a rice wreath instead —<br />the church will donate the rice<br />to neighbors in need.">축하 화환, 화분, 꽃바구니는 정중히 사양합니다.<br />마음을 전하고 싶으신 분들은<br />꽃 화환 대신 쌀 화환으로 보내주시면<br />성당을 통해 도움이 필요한 이웃들께<br />소중히 기부하겠습니다.</p>
+  </section>
+
+  <!-- ===== 참석 여부 (RSVP) =====
+  <section class="section rsvp-section">
+    <p class="eyebrow">RSVP</p>
+    <h2 class="section-title">참석 의사 전달</h2>
+    <p class="rsvp__desc">참석 여부를 알려주시면<br />준비에 큰 도움이 됩니다. 감사합니다 🙏</p>
+
+    <form id="rsvp-form" class="form">
+      <label class="form__field">
+        <span>성함</span>
+        <input type="text" name="name" required placeholder="홍길동" />
+      </label>
+
+      <fieldset class="form__field">
+        <span>참석 여부</span>
+        <div class="radio-row">
+          <label><input type="radio" name="attend" value="참석" checked /> 참석</label>
+          <label><input type="radio" name="attend" value="미정" /> 미정</label>
+          <label><input type="radio" name="attend" value="불참" /> 불참</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form__field">
+        <span>어느 쪽 하객이신가요?</span>
+        <div class="radio-row">
+          <label><input type="radio" name="side" value="신랑측" checked /> 신랑측</label>
+          <label><input type="radio" name="side" value="신부측" /> 신부측</label>
+        </div>
+      </fieldset>
+
+      <label class="form__field">
+        <span>참석 인원</span>
+        <input type="number" name="guests" min="1" value="1" />
+      </label>
+
+      <label class="form__field">
+        <span>전달하실 말씀 (선택)</span>
+        <textarea name="message" rows="3" placeholder="축하 메시지를 남겨주세요"></textarea>
+      </label>
+
+      <button type="submit" class="btn btn--primary">제출하기</button>
+      <p class="form__note" id="rsvp-note"></p>
+    </form>
+  </section>
+  -->
+
+  <!-- ===== 공유 ===== -->
+  <section class="section share-section">
+    <p class="eyebrow">SHARE</p>
+    <h2 class="section-title" data-kr="청첩장 공유하기" data-en="Share the Invitation">청첩장 공유하기</h2>
+    <div class="share-buttons">
+      <button class="btn btn--outline" id="btn-share" data-kr="🔗 공유하기" data-en="🔗 Share">🔗 공유하기</button>
+      <button class="btn btn--outline" id="btn-copy-link" data-kr="📋 링크 복사" data-en="📋 Copy Link">📋 링크 복사</button>
+    </div>
+  </section>
+
+  <!-- ===== 푸터 ===== -->
+  <footer class="footer">
+    <p class="footer__thanks" data-html="1" data-kr="저희의 새로운 시작을<br />함께해 주셔서 감사합니다 🤍" data-en="Thank you for being part of<br />our new beginning 🤍">저희의 새로운 시작을<br />함께해 주셔서 감사합니다 🤍</p>
+  </footer>
+
+</div>
+
+<!-- 라이트박스 -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" id="lightbox-close" aria-label="닫기">✕</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="이전">‹</button>
+  <div class="lightbox__stage">
+    <img class="lightbox__image" id="lightbox-image" alt="" />
+  </div>
+  <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="다음">›</button>
+</div>
+
+<dialog class="story" id="story" aria-labelledby="story-title">
+  <div class="story__slides" id="story-slides"></div>
+  <div class="story__shade"></div>
+  <header class="story__header">
+    <div><p class="story__eyebrow">OUR WEDDING STORY</p><h2 id="story-title" data-kr="우리의 이야기" data-en="Our story">우리의 이야기</h2></div>
+    <button type="button" class="story__control" id="story-close" autofocus><span data-kr="닫기" data-en="Close">닫기</span> ×</button>
+  </header>
+  <div class="story__bottom">
+    <p class="story__caption" id="story-caption"></p>
+    <p class="story__status" id="story-status" role="status"></p>
+    <div class="story__progress" id="story-progress" aria-hidden="true"></div>
+    <div class="story__controls">
+      <button type="button" class="story__control" id="story-prev" aria-label="Previous photo / 이전 사진">‹</button>
+      <button type="button" class="story__control" id="story-pause"></button>
+      <button type="button" class="story__control" id="story-next" aria-label="Next photo / 다음 사진">›</button>
+      <span class="story__count" id="story-count"></span>
+      <button type="button" class="story__control" id="story-sound"></button>
+    </div>
+  </div>
+</dialog>
+
+<script src="js/config.js?v=20261010n"></script>
+<script src="js/main.js?v=20261010n"></script>
+<script src="js/story.js?v=20261010n"></script>
+</body>
+</html>
